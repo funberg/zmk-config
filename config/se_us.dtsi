@@ -1,0 +1,46 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "keys_se.h"
+/ {
+    behaviors {
+        /omit-if-no-ref/ us_dot: bahavior_us_style_dot_on_se {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout dot on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_DOT>, <&kp SE_RABK>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ us_comma: bahavior_us_style_comma_on_se {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout comma on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_COMM>, <&kp SE_LABK>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ us_slash: bahavior_us_style_slash_on_se {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout slash on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_SLSH>, <&kp SE_QUES>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ us_scln: bahavior_us_style_semi_colon_on_se {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout semi colon on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_SCLN>, <&kp SE_COLN>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ us_quot: bahavior_us_style_quote_on_se {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout quote on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_QUOT>, <&kp SE_DQUO>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
