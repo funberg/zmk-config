@@ -25,12 +25,13 @@
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I    &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K    &kp L   &us_scln
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &us_comma  &us_dot  &us_slash
+   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I    &kp O   &kp P
+   &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K    &kp L   &us_scln
+   &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &us_comma  &us_dot  &us_slash
           &kp LGUI &mo NUM &kp LCTL   &lt NAV SPC &mo CDE &kp LSHFT
                         >;
                 };
+
                 nav_layer {
 // -----------------------------------------------------------------------------------------
 // |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
@@ -52,10 +53,10 @@
 // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp BANG  &kp SE_AT &kp HASH  &kp SE_DLR  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
-   &trans    &trans    &trans    &trans      &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans      &trans      &trans    &trans   &trans   &trans   &kp BSLH
-                       &kp LGUI  &trans      &kp SPC     &kp RET   &trans   &kp RALT
+   &kp BANG  &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR &kp SE_ASTR &kp SE_LPRN  &kp SE_RPRN
+   &none     &none     &kp SE_LCBR  &kp SE_RCBR  &none           &none        &kp SE_LPRN &kp SE_RPRN &kp SE_PIPE  &kp SE_MINS
+   &none     &none     &kp SE_LBRC  &kp SE_RBRC  &none           &none        &kp SE_PLUS &kp SE_EQL  &kp SE_BSLS  &kp SE_UNDS
+                       &trans       &trans       &trans          &trans       &trans      &trans
                         >;
                 };
 
