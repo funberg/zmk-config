@@ -9,6 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include "se_us.dtsi"
 
+&lt {
+        retro-tap;
+}
 
 #define NAV   1
 #define CDE   2
