@@ -15,49 +15,50 @@
 
 / {
 
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                        if-layers = <2 3>;
-                        then-layer = <4>;
-                };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
+    };
 
-        behaviors {
-                lhm: left_homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "POSITIONAL_HOLD_TAP";
-                        #binding-cells = <2>;
-                        flavor = "hold-preferred";
-                        tapping-term-ms = <400>;
-                        quick-tap-ms = <200>;
-                        retro-tap;
-                        bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <33>, <34>, <35>;
-                };
-                rhm: right_homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "POSITIONAL_HOLD_TAP_RIGHT";
-                        #binding-cells = <2>;
-                        flavor = "hold-preferred";
-                        tapping-term-ms = <400>;
-                        quick-tap-ms = <200>;
-                        retro-tap;
-                        bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
-                };        };
+    behaviors {
+        lhm: left_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <33>, <34>, <35>;
+        };
+        rhm: right_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP_RIGHT";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
+        };
+    };
 
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
+        default_layer {
 // -------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
 //&us_scln
-                        bindings = <
+        bindings = <
    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I    &kp O   &kp P
    &lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F &kp G     &kp H &rhm RGUI J &rhm RALT K  &rhm RCTL L &rhm RSFT SE_SCLN
    &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &us_comma  &us_dot  &us_slash
@@ -65,52 +66,50 @@
                         >;
                 };
 
-                nav_layer {
-
-                        bindings = <
+        nav_layer {
+            bindings = <
    &kp ESC   &trans  &kp ESC  &kp TILD &trans     &kp TAB  &kp HOME &kp UARW &kp END  &kp BKSP
    &kp LSHFT &kp LCTL &kp RALT &kp GUI &none      &kp FSLH &kp LARW &kp DARW &kp RARW &kp DEL
    &trans    &trans  &trans   &trans   &trans     &kp BSLH &trans   &trans   &trans   &kp RET
                         &trans   &trans   &trans     &trans   &trans   &trans
-                        >;
-                };
+            >;
+        };
 
-                code_layer {
-
-                        bindings = <
+        code_layer {
+            bindings = <
    &kp BANG  &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR &kp SE_ASTR &kp SE_LPRN  &kp SE_RPRN
    &none     &none     &kp SE_LCBR  &kp SE_RCBR  &none           &none        &kp SE_LPRN &kp SE_RPRN &kp SE_PIPE  &kp SE_MINS
    &none     &none     &kp SE_LBRC  &kp SE_RBRC  &none           &none        &kp SE_PLUS &kp SE_EQL  &kp SE_BSLS  &kp SE_UNDS
                        &trans       &trans       &trans          &trans       &trans      &trans
-                        >;
-                };
+            >;
+        };
 
-                num_layer {
-                        bindings = <
+        num_layer {
+            bindings = <
    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7   &kp N8   &kp N9   &kp N0
    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp MINUS &kp N4   &kp N5   &kp N6   &kp PIPE
    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &trans    &kp N1   &kp N2   &kp N3   &kp BSLH
                        &trans    &trans    &kp RET     &kp SPC   &kp N0   &us_dot
-                        >;
-                };
+            >;
+        };
 
-                adjust_layer {
-                        bindings = <
+        adjust_layer {
+            bindings = <
    &kp BANG  &kp ATSN  &kp HASH  &kp CURU  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
    &bt BT_SEL 0    &trans    &trans    &trans    &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE
    &bt BT_SEL 1    &trans    &trans    &trans    &trans      &trans    &trans   &trans   &trans   &kp BSLH
                        &trans    &trans    &trans      &trans    &trans   &trans
-                        >;
-                };
+            >;
+        };
 
-                game_layer {
-                        bindings = <
+        game_layer {
+            bindings = <
    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I    &kp O   &kp P
         &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I    &kp O   &kp P
    &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &us_comma  &us_dot  &us_slash
           &kp ESC &kp DEL &kp SPC   &kp SPC &kp TAB &kp RET
-                        >;
-                };
+            >;
+        };
 
-              };
-          };
+    };
+};
