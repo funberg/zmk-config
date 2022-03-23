@@ -14,6 +14,15 @@
 #define NUM   3
 
 / {
+
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                        if-layers = <2 3>;
+                        then-layer = <4>;
+                };
+        };
+
         behaviors {
                 lhm: left_homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
