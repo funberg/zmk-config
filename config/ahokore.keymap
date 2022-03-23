@@ -80,10 +80,10 @@
 
         nav_layer {
             bindings = <
-&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME  &kp UARW     &kp END  &kp BKSP
-&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW  &kp DARW     &kp RARW &kp DEL
-&none    &none    &none    &none    &none      &none     &kp K_CUT &kp C_AC_CUT &none    &kp RET
-                  &trans   &trans   &trans     &trans    &trans    &trans
+&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
+&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
+&none    &none    &none    &none    &none      &none     &kp X    &kp C    &kp V    &kp RET
+                  &trans   &trans   &trans     &trans    &trans   &trans
             >;
         };
 
