@@ -95,10 +95,10 @@
 
         adjust_layer {
             bindings = <
-   &kp BANG  &kp ATSN  &kp HASH  &kp CURU  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
-   &bt BT_SEL 0    &trans    &trans    &trans    &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE
-   &bt BT_SEL 1    &trans    &trans    &trans    &trans      &trans    &trans   &trans   &trans   &kp BSLH
-                       &trans    &trans    &trans      &trans    &trans   &trans
+&bootloader  &none &none  &none  &none       &none  &none  &none  &none &none
+&bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none  &none &none
+&bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none  &none &none
+                   &trans &trans &trans      &trans &trans &trans
             >;
         };
 
