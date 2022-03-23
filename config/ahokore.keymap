@@ -12,6 +12,8 @@
 #define NAV   1
 #define CDE   2
 #define NUM   3
+#define ADJ   4
+#define GAM   5
 
 / {
 
@@ -105,19 +107,19 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &none &none  &none  &none       &none  &none  &none  &none &none
-&bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none  &none &none
-&bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none  &none &none
-                   &trans &trans &trans      &trans &trans &trans
+&bootloader  &none &none  &none  &none       &tog GAM  &none  &none  &none &none
+&bt BT_SEL 0 &none &none  &none  &none       &none     &none  &none  &none &none
+&bt BT_SEL 1 &none &none  &none  &none       &none     &none  &none  &none &none
+                   &trans &trans &trans      &trans    &trans &trans
             >;
         };
 
         game_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R         &none &none &none &none &none 
-&kp LSFT &kp A  &kp S  &kp D  &kp F         &none &none &none &none &none 
-&kp LCTL &kp Z  &kp X  &kp C  &kp V         &none &none &none &none &none 
-                &kp N1 &kp N2 &kp SPC       &none &none &none
+&kp TAB  &kp Q  &kp W  &kp E  &kp R          &tog GAM &none &none &none &none 
+&kp LSFT &kp A  &kp S  &kp D  &kp F          &none    &none &none &none &none 
+&kp LCTL &kp Z  &kp X  &kp C  &kp V          &none    &none &none &none &none 
+                &kp N1 &kp N2 &kp SPC        &none    &none &none
             >;
         };
 
