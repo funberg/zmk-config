@@ -28,7 +28,7 @@
     behaviors {
         lhm: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
+            label = "LEFT_HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <400>;
@@ -39,7 +39,7 @@
         };
         rhm: right_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP_RIGHT";
+            label = "RIGHT_HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <400>;
@@ -49,9 +49,9 @@
             hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
         };
 
-        /omit-if-no-ref/ ltr: behavior_layer_tap {
+        ltr: behavior_layer_tap_retro {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP";
+            label = "LAYER_TAP_RETRO";
             #binding-cells = <2>;
             flavor = "balanced";
             retro-tap;
