@@ -90,8 +90,8 @@
         code_layer {
             bindings = <
 &kp BANG  &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR &kp SE_ASTR &kp SE_LPRN  &kp SE_RPRN
-&none     &none     &kp SE_LCBR  &kp SE_RCBR  &none           &none        &kp SE_LPRN &kp SE_RPRN &kp SE_PIPE  &kp SE_MINS
-&none     &none     &kp SE_LBRC  &kp SE_RBRC  &none           &none        &kp SE_PLUS &kp SE_EQL  &kp SE_BSLS  &kp SE_UNDS
+&none     &none     &kp SE_LCBR  &kp SE_RCBR  &none           &kp SE_DQUO  &kp SE_LPRN &kp SE_RPRN &kp SE_PIPE  &kp SE_MINS
+&none     &none     &kp SE_LBRC  &kp SE_RBRC  &none           &kp SE_QUOT  &kp SE_PLUS &kp SE_EQL  &kp SE_BSLS  &kp SE_UNDS
                     &trans       &trans       &trans          &trans       &trans      &trans
             >;
         };
