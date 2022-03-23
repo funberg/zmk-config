@@ -70,13 +70,13 @@
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
 //&us_scln
-        bindings = <
+            bindings = <
 &kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y   &kp U       &kp I        &kp O       &kp P
 &lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F &kp G          &kp H   &rhm RGUI J &rhm RALT K  &rhm RCTL L &rhm RSFT SE_SCLN
 &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N   &kp M       &us_comma    &us_dot     &us_slash
                         &kp ESC     &lt NUM DEL &lt NAV BKSP   &kp SPC &lt CDE TAB &kp RET
-                        >;
-                };
+            >;
+        };
 
         nav_layer {
             bindings = <
