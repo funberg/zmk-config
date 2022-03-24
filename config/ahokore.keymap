@@ -52,7 +52,7 @@
         rhm_scln: right_homerow_mods_scln {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SEMICOLON";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
