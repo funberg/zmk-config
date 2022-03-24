@@ -49,6 +49,18 @@
             hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
         };
 
+/*         rhm_scln: right_homerow_mods_scln {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_MODS_SEMICOLON";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&us_scln>;
+            hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
+        }; */
+
         ltr: behavior_layer_tap_retro {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RETRO";
@@ -107,19 +119,19 @@
 
         adjust_layer {
             bindings = <
-&bootloader &bt BT_SEL 0 &bt BT_SEL 1 &none    &none       &tog GAM  &none  &none  &none       &kp SE_ARNG
-&kp LSFT    &kp LCTL     &kp RALT     &kp LGUI &none       &none     &none  &none  &kp SE_ODIA &kp SE_ADIA
-&nonw       &none        &none        &none    &none       &none     &none  &none  &none       &none
-                         &trans       &trans   &trans      &trans    &trans &trans
+&bootloader  &none &none  &none  &none       &kp SE_ARNG &none  &none &none &tog GAM
+&bt BT_SEL 0 &none &none  &none  &none       &kp SE_ADIA &none  &none &none &none
+&bt BT_SEL 1 &none &none  &none  &none       &kp SE_ODIA &none  &none &none &none
+                   &trans &trans &trans      &trans      &trans &trans
             >;
         };
 
         game_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R          &tog GAM &none &none &none &none 
-&kp LSFT &kp A  &kp S  &kp D  &kp F          &none    &none &none &none &none 
-&kp LCTL &kp Z  &kp X  &kp C  &kp V          &none    &none &none &none &none 
-                &kp N1 &kp N2 &kp SPC        &none    &none &none
+&kp TAB  &kp Q  &kp W  &kp E  &kp R          &none &none &none &none &tog GAM
+&kp LSFT &kp A  &kp S  &kp D  &kp F          &none &none &none &none &none
+&kp LCTL &kp Z  &kp X  &kp C  &kp V          &none &none &none &none &none
+                &kp N1 &kp N2 &kp SPC        &none &none &none
             >;
         };
 
