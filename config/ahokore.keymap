@@ -25,6 +25,14 @@
         };
     };
 
+    conditional_layers_win {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <2 3>;
+            then-layer = <4>;
+        };
+    };
+
     behaviors {
         lhm: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -90,12 +98,30 @@
             >;
         };
 
+        default_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
+            >;
+        };
+
         nav_layer {
             bindings = <
 &kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
 &kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
 &none    &none    &none    &none    &none      &none     &kp X    &kp C    &kp V    &kp RET
                   &trans   &trans   &trans     &trans    &trans   &trans
+            >;
+        };
+
+        nav_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
             >;
         };
 
@@ -108,12 +134,30 @@
             >;
         };
 
+        code_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
+            >;
+        };
+
         num_layer {
             bindings = <
 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7       &kp N8   &kp N9   &kp N0
 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp MINUS &kp N4       &kp N5   &kp N6   &kp PIPE
 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &trans    &kp N1       &kp N2   &kp N3   &kp BSLH
                     &trans    &trans    &kp RET     &kp SPC   &ltr CDE N0  &us_dot
+            >;
+        };
+
+        num_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
             >;
         };
 
@@ -126,12 +170,30 @@
             >;
         };
 
+        adjust_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
+            >;
+        };
+
         game_layer {
             bindings = <
 &kp TAB  &kp Q  &kp W  &kp E  &kp R          &none &none &none &none &tog GAM
 &kp LSFT &kp A  &kp S  &kp D  &kp F          &none &none &none &none &none
 &kp LCTL &kp Z  &kp X  &kp C  &kp V          &none &none &none &none &none
                 &kp N1 &kp N2 &kp SPC        &none &none &none
+            >;
+        };
+
+        game_layer_win {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans        &trans  &trans   &trans  &trans  &trans
+                &trans  &trans   &trans        &trans  &trans   &trans
             >;
         };
 
