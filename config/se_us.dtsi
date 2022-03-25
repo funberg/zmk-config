@@ -19,6 +19,13 @@
                 mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        /omit-if-no-ref/ us_comma_mac: bahavior_us_style_comma_on_se_mac {
+                compatible = "zmk,behavior-mod-morph";
+                label = "US layout comma on se";
+                #binding-cells = <0>;
+                bindings = <&kp SE_COMM>, <&kp SE_LABK_MAC>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         /omit-if-no-ref/ us_slash: bahavior_us_style_slash_on_se {
                 compatible = "zmk,behavior-mod-morph";
                 label = "US layout slash on se";
