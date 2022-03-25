@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "keys_se.h"
+#include "keymap_swedish.h"
 / {
     behaviors {
         /omit-if-no-ref/ us_dot: bahavior_us_style_dot_on_se {
