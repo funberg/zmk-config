@@ -1,0 +1,176 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include "se_us.dtsi"
+
+#define CDE   2
+#define NUM   4
+#define NAV   6
+#define ADJ   7
+#define GAM   9
+
+/ {
+
+    conditional_layers_mac {
+        compatible = "zmk,conditional-layers";
+        tri_layer_mac {
+            if-layers = <CDE NUM>;
+            then-layer = <ADJ>;
+        };
+    };
+
+    conditional_layers_win {
+        compatible = "zmk,conditional-layers";
+        tri_layer_win {
+            if-layers = <(CDE+1) (NUM+1)>;
+            then-layer = <(ADJ+1)>;
+        };
+    };
+
+    behaviors {
+        lhm: left_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOMEROW_MODS";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <33>, <34>, <35>;
+        };
+        rhm: right_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_MODS";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
+        };
+
+        rhm_scln: right_homerow_mods_scln {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_MODS_SEMICOLON";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&us_scln>;
+            hold-trigger-key-positions = <0>, <1>, <2>, <3>, <4>, <10>, <11>, <12>, <13>, <14>, <20>, <21>, <22>, <23>, <24>, <30>, <31>, <32>;
+        };
+
+        ltr: behavior_layer_tap_retro {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_RETRO";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            retro-tap;
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y   &kp U        &kp I            &kp O       &kp P
+&lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F &kp G          &kp H   &rhm RGUI J  &rhm RALT K      &rhm RCTL L &rhm_scln RSFT SE_SCLN
+&kp Z       &kp X       &kp C       &kp V       &kp B          &kp N   &kp M        &us_comma_mac    &us_dot     &us_slash
+                        &kp ESC     &lt NUM RET &lt NAV TAB    &kp SPC &lt CDE BKSP &kp DEL
+            >;
+        };
+
+        default_layer_win {
+            bindings = <
+&trans &trans &trans &trans          &trans             &trans &trans           &trans    &trans &trans
+&trans &trans &trans &trans          &trans             &trans &trans           &trans    &trans &trans
+&trans &trans &trans &trans          &trans             &trans &trans           &us_comma &trans &trans
+              &trans &lt (NUM+1) RET &trans             &trans &lt (CDE+1) BKSP &trans
+            >;
+        };
+
+        code_layer {
+            bindings = <
+&kp BANG  &kp SE_AT &kp HASH         &kp SE_DLR       &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &none            &kp SE_MINS
+&none     &none     &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &none           &kp SE_DQUO  &kp SE_LPRN  &kp SE_RPRN &kp SE_PIPE_MAC  &kp SE_UNDS
+&none     &none     &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &none           &kp SE_QUOT  &kp SE_PLUS  &kp SE_EQL  &kp SE_BSLS_MAC  &none
+                    &trans           &trans           &trans          &trans       &trans       &trans
+            >;
+        };
+
+        code_layer_win {
+            bindings = <
+&kp BANG  &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &none        &kp SE_MINS
+&none     &none     &kp SE_LCBR  &kp SE_LBRC  &none           &kp SE_DQUO  &kp SE_LPRN  &kp SE_RPRN &kp SE_PIPE  &kp SE_UNDS
+&none     &none     &kp SE_RCBR  &kp SE_RBRC  &none           &kp SE_QUOT  &kp SE_PLUS  &kp SE_EQL  &kp SE_BSLS  &none
+          &trans    &trans       &trans                       &trans       &trans       &trans
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &kp N6      &kp N7       &kp N8   &kp N9   &kp SE_ARNG
+&kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4       &kp N5   &kp N6   &kp SE_ADIA
+&none     &none     &none     &none     &none            &kp SE_PLUS &kp N1       &kp N2   &kp N3   &kp SE_ODIA
+                    &trans    &trans    &kp RET          &kp SPC     &ltr CDE N0  &us_dot
+            >;
+        };
+
+        num_layer_win {
+            bindings = <
+&kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &kp N6      &kp N7          &kp N8   &kp N9   &kp SE_ARNG
+&kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4          &kp N5   &kp N6   &kp SE_ADIA
+&none     &none     &none     &none     &none            &kp SE_PLUS &kp N1          &kp N2   &kp N3   &kp SE_ODIA
+                    &trans    &trans    &trans           &trans      &ltr (CDE+1) N0 &trans
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
+&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
+&none    &none    &none    &none    &none      &none     &kp X    &kp C    &kp V    &kp RET
+                  &trans   &trans   &trans     &trans    &trans   &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+&bootloader  &none &none  &none  &none       &none  &none  &none &none &tog GAM
+&bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none &none &to 0
+&bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none &none &to 1
+                   &trans &trans &trans      &trans &trans &trans
+            >;
+        };
+
+        adjust_layer_win {
+            bindings = <
+&bootloader  &none &none  &none  &none       &none  &none  &none &none &tog GAM
+&bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none &none &to 0
+&bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none &none &to 1
+                   &trans &trans &trans      &trans &trans &trans
+            >;
+        };
+        game_layer {
+            bindings = <
+&kp TAB  &kp Q  &kp W  &kp E  &kp R          &none &none &none &none &tog GAM
+&kp LSFT &kp A  &kp S  &kp D  &kp F          &none &none &none &none &none
+&kp LCTL &kp Z  &kp X  &kp C  &kp V          &none &none &none &none &none
+                &kp N1 &kp N2 &kp SPC        &none &none &none
+            >;
+        };
+
+    };
+};
