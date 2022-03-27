@@ -95,7 +95,7 @@
 
         num_layer {
             bindings = <
-&kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &kp N6      &kp N7       &kp N8   &kp N9   &kp SE_ARNG
+&kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &none       &kp N7       &kp N8   &kp N9   &kp SE_ARNG
 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4       &kp N5   &kp N6   &kp SE_ADIA
 &none     &none     &none     &none     &none            &kp SE_PLUS &kp N1       &kp N2   &kp N3   &kp SE_ODIA
                     &trans    &trans    &kp RET          &kp SPC     &ltr CDE N0  &us_dot
