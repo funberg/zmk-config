@@ -1,0 +1,46 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "keymap_swedish.h"
+/ {
+    behaviors {
+        /omit-if-no-ref/ tdC: tap_dance_C {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_C";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LG(C)>;
+        };
+
+        /omit-if-no-ref/ tdV: tap_dance_V {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_V";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp V>, <&kp LG(V)>;
+        };
+
+        /omit-if-no-ref/ tdB: tap_dance_B {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_B";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp B>, <&kp LG(B)>;
+        };
+        
+        /omit-if-no-ref/ tdX: tap_dance_X {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_X";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp X>, <&kp LG(X)>;
+        };
+
+        /omit-if-no-ref/ tdZ: tap_dance_Z {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_Z";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Z>, <&kp LG(Z)>;
+        };
+    };
+};
