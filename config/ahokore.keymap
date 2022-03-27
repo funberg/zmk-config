@@ -37,7 +37,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <33>, <34>, <35>;
         };
-        
+
         rhm: right_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS";
@@ -71,6 +71,15 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
+
+        ltl: behavior_layer_tap_retro {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_RETRO";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };  
     };
 
     keymap {
@@ -78,10 +87,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y   &kp U        &kp I            &kp O       &kp P
-&lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F &kp G          &kp H   &rhm RGUI J  &rhm RALT K      &rhm RCTL L &rhm_scln RSFT SE_SCLN
-&kp Z       &kp X       &kp C       &kp V       &kp B          &kp N   &kp M        &us_comma_mac    &us_dot     &us_slash
-                        &kp ESC     &lt NUM RET &lt NAV TAB    &kp SPC &lt CDE BKSP &kp DEL
+&kp Q       &kp W       &kp E       &kp R        &kp T          &kp Y   &kp U         &kp I            &kp O       &kp P
+&lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F  &kp G          &kp H   &rhm RGUI J   &rhm RALT K      &rhm RCTL L &rhm_scln RSFT SE_SCLN
+&kp Z       &kp X       &kp C       &kp V        &kp B          &kp N   &kp M         &us_comma_mac    &us_dot     &us_slash
+                        &kp ESC     &ltl NUM DEL &lt NAV TAB    &kp SPC &ltl CDE BKSP &kp RET
             >;
         };
 
