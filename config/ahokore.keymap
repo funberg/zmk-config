@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SEMICOLON";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
