@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include "se_us.dtsi"
 
-#define NAV   1
-#define CDE   2
-#define NUM   3
+#define CDE   1
+#define NUM   2
+#define NAV   3
 #define ADJ   4
 #define GAM   5
 
@@ -99,6 +99,15 @@
 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4       &kp N5   &kp N6   &kp SE_ADIA
 &none     &none     &none     &none     &none            &kp SE_PLUS &kp N1       &kp N2   &kp N3   &kp SE_ODIA
                     &trans    &trans    &kp RET          &kp SPC     &ltr CDE N0  &us_dot
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
+&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
+&none    &none    &none    &none    &none      &none     &kp X    &kp C    &kp V    &kp RET
+                  &trans   &trans   &trans     &trans    &trans   &trans
             >;
         };
 
