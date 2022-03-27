@@ -30,18 +30,19 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5>, <6>, <7>, <8>, <9>, <15>, <16>, <17>, <18>, <19>, <25>, <26>, <27>, <28>, <29>, <33>, <34>, <35>;
         };
+        
         rhm: right_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
@@ -53,7 +54,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SEMICOLON";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             retro-tap;
