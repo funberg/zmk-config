@@ -84,21 +84,12 @@
             >;
         };
 
-        nav_layer {
-            bindings = <
-&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
-&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
-&none    &none    &none    &none    &none      &none     &kp X    &kp C    &kp V    &kp RET
-                  &trans   &trans   &trans     &trans    &trans   &trans
-            >;
-        };
-
         code_layer {
             bindings = <
-&kp BANG  &kp SE_AT &kp HASH         &kp SE_DLR       &kp PRCNT       &kp SE_CIRC  &kp SE_AMPR &kp SE_ASTR &none            &kp SE_MINS
-&none     &none     &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &none           &kp SE_DQUO  &kp SE_LPRN &kp SE_RPRN &kp SE_PIPE_MAC  &kp SE_UNDS
-&none     &none     &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &none           &kp SE_QUOT  &kp SE_PLUS &kp SE_EQL  &kp SE_BSLS_MAC  &none
-                    &trans           &trans           &trans          &trans       &trans      &trans
+&kp BANG  &kp SE_AT &kp HASH         &kp SE_DLR       &kp PRCNT            &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS
+&none     &none     &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO
+&none     &none     &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK          &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT
+                    &trans           &trans           &trans               &trans       &trans       &trans
             >;
         };
 
