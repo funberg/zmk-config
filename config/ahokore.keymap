@@ -36,15 +36,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-
-        ltl: behavior_layer_tap_retro {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_RETRO";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
     };
 
     keymap {
