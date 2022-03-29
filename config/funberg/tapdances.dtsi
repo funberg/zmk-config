@@ -42,5 +42,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp Z>, <&kp LG(Z)>;
         };
+
+        /omit-if-no-ref/ td23: tap_dance_23 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_23";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp 2>, <&kp 3>;
+        };
     };
 };
