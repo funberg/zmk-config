@@ -1,0 +1,17 @@
+---
+ version: "3.9"
+ services:
+     shell:
+         ports:
+             - 3000
+         build:
+             context: .devcontainer/
+             dockerfile: Dockerfile
+         volumes:
+             - $PWD:/workspaces/zmk-config
+             - zmk-root-user:/root
+             - zmk-root:/workspaces
+
+ volumes:
+     zmk-root-user:
+     zmk-root:
