@@ -26,6 +26,55 @@
         };
     };
 
+    combos {
+// 0  1  2  3  4      5  6  7  8  9
+// 10 11 12 13 14    15 16 17 18 19
+// 20 21 22 23 24    25 26 27 28 29
+//       30 31 32    33 34 35
+
+        compatible = "zmk,combos";
+        combo_lsft {
+            timeout-ms = <50>;
+            key-positions = <10 20>;
+            bindings = <&kp LEFT_SHIFT>;
+        };
+        combo_lctrl {
+            timeout-ms = <50>;
+            key-positions = <11 21>;
+            bindings = <&kp LEFT_CONTROL>;
+        };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <12 22>;
+            bindings = <&kp LEFT_ALT>;
+        };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <13 23>;
+            bindings = <&kp LEFT_GUI>;
+        };
+        combo_rsft {
+            timeout-ms = <50>;
+            key-positions = <19 29>;
+            bindings = <&kp RIGHT_SHIFT>;
+        };
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <18 28>;
+            bindings = <&kp RIGHT_CONTROL>;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <17 27>;
+            bindings = <&kp RIGHT_ALT>;
+        };
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <16 26>;
+            bindings = <&kp RIGHT_GUI>;
+        };
+    };
+
     behaviors {
         ltr: behavior_layer_tap_retro {
             compatible = "zmk,behavior-hold-tap";
