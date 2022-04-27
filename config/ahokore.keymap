@@ -79,10 +79,10 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &none &none  &none  &none       &none  &none  &none &none &tog GAM
-&bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none &none &none
-&bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none &none &none
-                   &trans &trans &trans      &trans &trans &trans
+&bootloader  &none &none  &none  &none       &kp C_NEXT  &kp C_MUTE    &none &none &tog GAM
+&bt BT_SEL 0 &none &none  &none  &none       &kp C_PP    &kp C_VOL_UP  &none &none &none
+&bt BT_SEL 1 &none &none  &none  &none       &kp C_PREV  &kp C_VOL_DN  &none &none &none
+                   &trans &trans &trans      &trans      &trans        &trans
             >;
         };
 
