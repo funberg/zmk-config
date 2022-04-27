@@ -103,7 +103,7 @@
             bindings = <
 &kp BANG  &kp SE_AT_MAC &kp HASH         &kp SE_DLR       &kp PRCNT            &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS
 &kp TAB   &none         &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO
-&none     &none         &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK          &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT
+&kp ESC   &none         &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK          &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT
                         &trans           &trans           &trans               &trans       &trans       &trans
             >;
         };
@@ -112,16 +112,16 @@
             bindings = <
 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &none       &kp N7  &kp N8   &kp N9   &kp SE_ARNG
 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4  &kp N5   &kp N6   &kp SE_ADIA
-&none     &none     &none     &none     &none            &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA
+&kp ESC   &none     &none     &none     &none            &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA
                     &trans    &trans    &kp RET          &kp N0      &trans  &us_dot
             >;
         };
 
         nav_layer {
             bindings = <
-&kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP
-&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL
-&none    &none    &none    &none    &none      &kp Z     &kp X    &kp C    &kp V    &kp RET
+&none    &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp DEL
+&kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp BKSP
+&kp ESC  &none    &none    &none    &none      &kp Z     &kp X    &kp C    &kp V    &kp RET
                   &trans   &trans   &trans     &trans    &trans   &trans
             >;
         };
