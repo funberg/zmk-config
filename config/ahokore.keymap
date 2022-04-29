@@ -90,7 +90,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RETRO";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
         };
