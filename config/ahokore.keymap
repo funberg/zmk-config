@@ -91,7 +91,7 @@
             label = "LAYER_TAP_RETRO";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             bindings = <&kp>, <&kp>;
         };
     };
