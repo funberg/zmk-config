@@ -38,6 +38,56 @@
         };
     };
 
+    combos {
+/*  
+ 0  1  2  3  4  5      6  7  8  9 10 11 
+12 13 14 15 16 17     18 19 20 21 22 23 
+24 25 26 27 28 29     30 31 32 33 34 35
+         36 37 38     39 40 41
+*/
+        compatible = "zmk,combos";
+        combo_lsft {
+            timeout-ms = <50>;
+            key-positions = <13 25>;
+            bindings = <&kp LEFT_SHIFT>;
+        };
+        combo_lctrl {
+            timeout-ms = <50>;
+            key-positions = <14 26>;
+            bindings = <&kp LEFT_CONTROL>;
+        };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            bindings = <&kp LEFT_ALT>;
+        };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp LEFT_GUI>;
+        };
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <19 31>;
+            bindings = <&kp RIGHT_GUI>;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <20 32>;
+            bindings = <&kp RIGHT_ALT>;
+        };
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <21 33>;
+            bindings = <&kp RIGHT_CONTROL>;
+        };
+        combo_rsft {
+            timeout-ms = <50>;
+            key-positions = <22 34>;
+            bindings = <&kp RIGHT_SHIFT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -45,17 +95,17 @@
             bindings = <
 &kp ESC    &kp Q       &kp W       &kp E       &kp R        &kp T          &kp Y   &kp U         &kp I            &kp O       &kp P                   &kp BSPC
 &kp TAB    &lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F  &kp G          &kp H   &rhm RGUI J   &rhm RALT K      &rhm RCTL L &rhm_scln RSFT SE_SCLN  &us_quot
-&kp LSHFT  &tdZ        &tdX        &tdC        &tdV         &tdB           &kp N   &kp M         &us_comma_mac    &us_dot     &us_slash               &kp RET
-                                   &kp TAB     &mo NUM      &lt NAV BKSP   &kp SPC &mo CDE       &kp RET
+&kp LSHFT  &tdZ_mac    &tdX_mac    &tdC_mac    &tdV_mac     &tdB_mac       &kp N   &kp M         &us_comma_mac    &us_dot     &us_slash               &kp RET
+                                   &lt NAV TAB &mo NUM      &kp BKSP       &kp SPC &mo CDE       &kp RET
             >;
         };
 
         code_layer {
             bindings = <
-&trans  &kp BANG  &kp SE_AT &kp HASH         &kp SE_DLR       &kp PRCNT            &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS  &trans
-&trans  &kp TAB   &none     &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO  &trans
-&trans  &none     &none     &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK          &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT  &trans
-                            &trans           &trans           &trans               &trans       &trans       &trans
+&trans  &kp BANG  &kp SE_AT_MAC &kp HASH         &kp SE_DLR       &kp PRCNT            &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS  &trans
+&trans  &kp TAB   &none         &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO  &trans
+&trans  &kp ESC   &none         &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK          &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT  &trans
+                                &trans           &trans           &trans               &trans       &trans       &trans
             >;
         };
 
@@ -63,35 +113,35 @@
             bindings = <
 &trans  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &none       &kp N7  &kp N8   &kp N9   &kp SE_ARNG  &trans
 &trans  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4  &kp N5   &kp N6   &kp SE_ADIA  &trans
-&trans  &none     &none     &none     &none     &none            &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA  &trans
+&trans  &kp ESC   &none     &none     &none     &none            &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA  &trans
                             &trans    &trans    &kp RET          &kp N0      &trans  &us_dot
             >;
         };
 
         nav_layer {
             bindings = <
-&trans  &kp ESC  &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp BKSP  &trans
-&trans  &kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp DEL   &trans
-&trans  &none    &none    &none    &none    &none      &kp Z     &kp X    &kp C    &kp V    &kp RET   &trans
+&trans  &none    &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp DEL   &trans
+&trans  &kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp BKSP  &trans
+&trans  &kp ESC  &none    &none    &none    &none      &kp Z     &kp X    &kp C    &kp V    &kp RET   &trans
                           &trans   &trans   &trans     &trans    &trans   &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-&trans  &bootloader  &none &none  &none  &none       &none  &none  &none &none &tog GAM  &trans
-&trans  &bt BT_SEL 0 &none &none  &none  &none       &none  &none  &none &none &none     &trans
-&trans  &bt BT_SEL 1 &none &none  &none  &none       &none  &none  &none &none &none     &trans
-                           &trans &trans &trans      &trans &trans &trans
+&trans  &bootloader  &reset &none  &none  &none       &none  &none  &none &none &tog GAM  &trans
+&trans  &bt BT_SEL 0 &none  &none  &none  &none       &none  &none  &none &none &none     &trans
+&trans  &bt BT_SEL 1 &none  &none  &none  &none       &none  &none  &none &none &none     &trans
+                            &trans &trans &trans      &trans &trans &trans
             >;
         };
 
         game_layer {
             bindings = <
-&trans  &kp TAB  &kp Q  &kp W  &kp E  &kp R          &none &none &none &none &tog GAM  &trans
-&trans  &kp LSFT &kp A  &kp S  &kp D  &kp F          &none &none &none &none &none     &trans
-&trans  &kp LCTL &kp Z  &kp X  &kp C  &kp V          &none &none &none &none &none     &trans
-                        &kp N1 &td23  &kp SPC        &none &none &none
+&trans  &kp TAB  &kp Q  &kp W  &kp E  &kp R          &kp ESC &none &none &none &tog GAM  &trans
+&trans  &kp LSFT &kp A  &kp S  &kp D  &kp F          &none   &none &none &none &none     &trans
+&trans  &kp LCTL &kp Z  &kp X  &kp C  &kp V          &none   &none &none &none &none     &trans
+                        &kp N1 &td23  &kp SPC        &none   &none &none
             >;
         };
 
