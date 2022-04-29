@@ -121,7 +121,7 @@
         nav_layer {
             bindings = <
 &trans  &none    &none    &none    &none    &none      &kp PG_UP &kp HOME &kp UARW &kp END  &kp DEL   &trans
-&trans  &kp LSFT &kp LCTL &kp RALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp BKSP  &trans
+&trans  &kp LSFT &kp LCTL &kp LALT &kp LGUI &none      &kp PG_DN &kp LARW &kp DARW &kp RARW &kp BKSP  &trans
 &trans  &kp ESC  &none    &none    &none    &none      &kp Z     &kp X    &kp C    &kp V    &kp RET   &trans
                           &trans   &trans   &trans     &trans    &trans   &trans
             >;
