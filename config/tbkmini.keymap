@@ -69,22 +69,22 @@
         combo_rgui {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&kp RIGHT_GUI>;
+            bindings = <&kp LEFT_GUI>;
         };
         combo_ralt {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp RIGHT_ALT>;
+            bindings = <&kp LEFT_ALT>;
         };
         combo_rctrl {
             timeout-ms = <50>;
             key-positions = <21 33>;
-            bindings = <&kp RIGHT_CONTROL>;
+            bindings = <&kp LEFT_CONTROL>;
         };
         combo_rsft {
             timeout-ms = <50>;
             key-positions = <22 34>;
-            bindings = <&kp RIGHT_SHIFT>;
+            bindings = <&kp LEFT_SHIFT>;
         };
     };
 
