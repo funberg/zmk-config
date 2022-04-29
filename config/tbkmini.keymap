@@ -94,7 +94,7 @@
         default_layer {
             bindings = <
 &kp ESC    &kp Q       &kp W       &kp E       &kp R        &kp T          &kp Y   &kp U         &kp I            &kp O       &kp P                   &kp BSPC
-&kp TAB    &lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F  &kp G          &kp H   &rhm RGUI J   &rhm RALT K      &rhm RCTL L &rhm_scln RSFT SE_SCLN  &us_quot
+&kp TAB    &lhm LSFT A &lhm LCTL S &lhm LALT D &lhm LGUI F  &kp G          &kp H   &rhm LGUI J   &rhm LALT K      &rhm LCTL L &rhm_scln LSFT SE_SCLN  &us_quot
 &kp LSHFT  &tdZ_mac    &tdX_mac    &tdC_mac    &tdV_mac     &tdB_mac       &kp N   &kp M         &us_comma_mac    &us_dot     &us_slash               &kp RET
                                    &lt NAV TAB &mo NUM      &kp BKSP       &kp SPC &mo CDE       &kp RET
             >;
@@ -129,10 +129,10 @@
 
         adjust_layer {
             bindings = <
-&trans  &bootloader  &reset &none  &none  &none       &none  &none  &none &none &tog GAM  &trans
-&trans  &bt BT_SEL 0 &none  &none  &none  &none       &none  &none  &none &none &none     &trans
-&trans  &bt BT_SEL 1 &none  &none  &none  &none       &none  &none  &none &none &none     &trans
-                            &trans &trans &trans      &trans &trans &trans
+&trans  &bootloader  &reset &none  &none  &none       &kp C_NEXT  &kp C_MUTE    &none &none &tog GAM  &trans
+&trans  &bt BT_SEL 0 &none  &none  &none  &none       &kp C_PP    &kp C_VOL_UP  &none &none &none     &trans
+&trans  &bt BT_SEL 1 &none  &none  &none  &none       &kp C_PREV  &kp C_VOL_DN  &none &none &none     &trans
+                            &trans &trans &trans      &trans      &trans        &trans
             >;
         };
 
