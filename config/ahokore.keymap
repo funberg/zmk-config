@@ -111,10 +111,10 @@
 
         code_layer {
             bindings = <
-&kp BANG  &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT        &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS  &kp SE_MINS
-&kp TAB   &none     &kp SE_LCBR  &kp SE_LBRC  &kp SE_LABK      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE  &kp SE_DQUO
-&kp ESC   &none     &kp SE_RCBR  &kp SE_RBRC  &kp SE_RABK      &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS  &kp SE_QUOT
-                    &trans       &trans       &trans           &trans       &trans       &trans
+&kp BANG    &kp SE_AT &kp HASH     &kp SE_DLR   &kp PRCNT        &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS  &kp SE_MINS
+&kp SE_TILD &none     &kp SE_LCBR  &kp SE_LBRC  &kp SE_LABK      &none        &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE  &kp SE_DQUO
+&kp ESC     &none     &kp SE_RCBR  &kp SE_RBRC  &kp SE_RABK      &none        &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS  &kp SE_QUOT
+                      &trans       &trans       &trans           &trans       &trans       &trans
             >;
         };
 
