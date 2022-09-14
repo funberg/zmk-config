@@ -1,0 +1,25 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Ahokore",
+            "type": "shell",
+            "command": "west build -p -b nice_nano -- -DSHIELD=ahokore -DZMK_CONFIG=\"/workspaces/zmk-config/config\" && cp build/zephyr/zmk.uf2 ../zmk-config/ahokore.uf2",
+            "options": {
+                "cwd": "/workspaces/app"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build TBK-mini",
+            "type": "shell",
+            "command": "west build -p -b nice_nano -- -DSHIELD=tbkmini_left -DZMK_CONFIG=\"/workspaces/zmk-config/config\" && cp build/zephyr/zmk.uf2 ../zmk-config/tbkmini_left.uf2",
+            "options": {
+                "cwd": "/workspaces/app"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
