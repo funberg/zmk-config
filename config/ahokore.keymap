@@ -163,7 +163,7 @@
             bindings = <
 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5           &none       &kp N7  &kp N8   &kp N9   &kp SE_ARNG
 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp SE_MINS &kp N4  &kp N5   &kp N6   &kp SE_ADIA
-&kp ESC   &none     &none     &none     &none            &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA
+&kp ESC   &none     &none     &none     &kp F11          &kp SE_PLUS &kp N1  &kp N2   &kp N3   &kp SE_ODIA
                     &trans    &trans    &kp RET          &kp N0      &trans  &us_dot
             >;
         };
@@ -188,10 +188,10 @@
 
         game_layer {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R          &kp ESC &none &none &none &tog GAM
-&kp LSFT &kp A  &kp S  &kp D  &kp F          &none   &none &none &none &none
-&kp LCTL &kp Z  &kp X  &kp C  &kp V          &none   &none &none &none &none
-                &kp N1 &td23  &kp SPC        &none   &none &none
+&kp TAB  &kp Q  &kp W     &kp E      &kp R          &kp ESC    &none &none &none &tog GAM
+&kp LSFT &kp A  &kp S     &kp D      &kp F          &alt_tab   &none &none &none &none
+&kp LCTL &kp Z  &kp X     &kp C      &kp V          &kp LS(F1) &none &none &none &none
+                &dn N3 N1 &dn N4 N2  &kp SPC        &none      &none &none
             >;
         };
 
