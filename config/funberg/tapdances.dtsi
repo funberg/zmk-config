@@ -90,5 +90,21 @@
             tapping-term-ms = <200>;
             bindings = <&kp N2>, <&kp N3>;
         };
+
+        /omit-if-no-ref/ td13: tap_dance_13 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_13";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N3>;
+        };
+
+        /omit-if-no-ref/ td24: tap_dance_24 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_24";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp N4>;
+        };
     };
 };
