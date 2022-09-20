@@ -39,52 +39,52 @@
 */
         compatible = "zmk,combos";
         combo_lsft {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <10 20>;
             bindings = <&kp LEFT_SHIFT>;
         };
         combo_lctrl {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <11 21>;
             bindings = <&kp LEFT_CONTROL>;
         };
         combo_lalt {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <12 22>;
             bindings = <&kp LEFT_ALT>;
         };
         combo_lgui {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <13 23>;
             bindings = <&kp LEFT_GUI>;
         };
         combo_rgui {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <16 26>;
             bindings = <&kp LEFT_GUI>;
         };
         combo_ralt {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <17 27>;
             bindings = <&kp LEFT_ALT>;
         };
         combo_rctrl {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <18 28>;
             bindings = <&kp LEFT_CONTROL>;
         };
         combo_rsft {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <19 29>;
             bindings = <&kp LEFT_SHIFT>;
         };
         combo_ctrl_shift {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <18 19>;
             bindings = <&kp LS(LEFT_CONTROL)> ;
         };
         combo_ctrl_shift_2 {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <10 11>;
             bindings = <&kp LS(LEFT_CONTROL)> ;
         };
