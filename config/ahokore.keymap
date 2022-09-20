@@ -103,9 +103,17 @@
     };
 
     behaviors {
+        dn: dual_key_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DUAL_KEY_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <140>;
+            bindings = <&kp>, <&kp>;
+        };
         ltr: behavior_layer_tap_retro {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_RETRO";
+            label = "LAYER_TAP_RETRO_3";
             #binding-cells = <2>;
             flavor = "balanced";
             retro-tap;
@@ -120,6 +128,13 @@
             tapping-term-ms = <400>;
             bindings = <&kp>, <&kp>;
         };
+        sk1: sticky_1sec {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_1SEC";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <3000>;
+      };
     };
 
     keymap {
