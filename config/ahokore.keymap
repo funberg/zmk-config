@@ -90,6 +90,18 @@
         };
     };
 
+    macros {
+        alt_tab: alt_tab {
+            label = "alt_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sk1 LALT>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+    };
+
     behaviors {
         ltr: behavior_layer_tap_retro {
             compatible = "zmk,behavior-hold-tap";
