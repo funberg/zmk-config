@@ -100,6 +100,27 @@
                 , <&macro_tap &kp TAB>
                 ;
         };
+
+        weapon1: weapon1 {
+            label = "weapon1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp N3>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp N1>
+                ;
+        };
+        weapon2: weapon2 {
+            label = "weapon2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp N4>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp N2>
+                ;
+        };
     };
 
     behaviors {
@@ -191,7 +212,7 @@
 &kp TAB  &kp Q  &kp W     &kp E      &kp R          &kp ESC    &none &none &none &tog GAM
 &kp LSFT &kp A  &kp S     &kp D      &kp F          &alt_tab   &none &none &none &none
 &kp LCTL &kp Z  &kp X     &kp C      &kp V          &kp LS(F1) &none &none &none &none
-                &dn N3 N1 &dn N4 N2  &kp SPC        &none      &none &none
+                &weapon1  &weapon2   &kp SPC        &none      &none &none
             >;
         };
 
