@@ -1,1 +1,9 @@
+// Don't lose this one since it sets the 5-column
+/ {
+  chosen {
+    //zmk,matrix_transform = &default_transform;
+    zmk,matrix_transform = &five_column_transform;
+  };
+};
+
 #include "42_keys.keymap"
