@@ -96,16 +96,6 @@
     };
 
     macros {
-        alt_tab: alt_tab {
-            label = "alt_tab";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &sk1 LALT>
-                , <&macro_tap &kp TAB>
-                ;
-        };
-
         weapon1: weapon1 {
             label = "weapon1";
             compatible = "zmk,behavior-macro";
@@ -129,23 +119,6 @@
     };
 
     behaviors {
-        dn: dual_key_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DUAL_KEY_TAP";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <140>;
-            bindings = <&kp>, <&kp>;
-        };
-        ltr: behavior_layer_tap_retro {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_RETRO_3";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            retro-tap;
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
         ht: hold_tap_retro {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_RETRO";
@@ -154,13 +127,6 @@
             tapping-term-ms = <400>;
             bindings = <&kp>, <&kp>;
         };
-        sk1: sticky_1sec {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_1SEC";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <3000>;
-      };
     };
 
     keymap {
@@ -170,7 +136,6 @@
             bindings = <
 &kp Q       &kp W       &kp E        &kp R        &kp T           &kp Y   &kp U         &kp I        &kp O       &kp P
 &lhm LSFT A &lhm LCTL S &lhm LALT D  &lhm LGUI F  &kp G           &kp H   &rhm LGUI J   &rhm LALT K  &rhm LCTL L &rhm_scln LSFT SE_SCLN
-/*&tdZ        &tdX        &tdC         &tdV         &tdB            &kp N   &kp M         &us_comma    &us_dot     &us_slash*/
 &ht LG(Z) Z &ht LG(X) X &ht LG(C) C  &ht LG(V) V  &ht LG(B) B     &kp N   &kp M         &us_comma    &us_dot     &us_slash
                         &lt NAV TAB  &mo NUM      &kp BKSP        &kp SPC &mo CDE       &kp RET
             >;
@@ -215,7 +180,7 @@
         game_layer {
             bindings = <
 &kp TAB  &kp Q  &kp W     &kp E      &kp R          &kp ESC    &none &none &none &tog GAM
-&kp LSFT &kp A  &kp S     &kp D      &kp F          &alt_tab   &none &none &none &none
+&kp LSFT &kp A  &kp S     &kp D      &kp F          &none      &none &none &none &none
 &kp LCTL &kp Z  &kp X     &kp C      &kp V          &kp LS(F1) &none &none &none &none
                 &weapon1  &weapon2   &kp SPC        &none      &none &none
             >;
