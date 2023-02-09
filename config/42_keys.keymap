@@ -18,7 +18,7 @@
 #define GAM   5
 
 &caps_word {
-    continue-list = <SE_UNDS SE_MINS>;
+    continue-list = <SE_UNDS SE_MINS BKSP>;
 };
 
 / {
