@@ -49,6 +49,7 @@
 */
         compatible = "zmk,combos";
 
+        // Mouse compos for mods
         COMBO(lsft, &kp LEFT_SHIFT, 10 20);
         COMBO(lctrl, &kp LEFT_CONTROL, 11 21);
         COMBO(lalt, &kp LEFT_ALT, 12 22);
@@ -58,12 +59,6 @@
         COMBO(ralt, &kp LEFT_ALT, 17 27);
         COMBO(rctrl, &kp LEFT_CONTROL, 18 28);
         COMBO(rsft, &kp LEFT_SHIFT, 19 29);
-
-        COMBO(lsctrl, &kp LS(LEFT_CONTROL), 10 11);
-        COMBO(rsctrl, &kp LS(LEFT_CONTROL), 18 19);
-
-        COMBO(lsgui, &kp LS(LEFT_GUI), 10 13);
-        COMBO(rsgui, &kp LS(LEFT_GUI), 16 19);
     };
 
     macros {
