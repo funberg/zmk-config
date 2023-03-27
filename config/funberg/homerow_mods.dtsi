@@ -9,8 +9,8 @@
       30 31 32    33 34 35
 */
 
-#define LEFT_KEYS_42  0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
-#define RIGHT_KEYS_42 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
+#define LEFT_KEYS_36  0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
+#define RIGHT_KEYS_36 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
 #define STR(X) #X
 #define XSTR(X) STR(X)
 
@@ -34,8 +34,8 @@
 
 / {
     behaviors {
-        HOMEROWMODS(lhm, RIGHT_KEYS_42);
-        HOMEROWMODS(rhm, LEFT_KEYS_42);
-        HOMEROWMODS2(rhm_scln, LEFT_KEYS_42, &us_scln);
+        HOMEROWMODS(lhm, RIGHT_KEYS_36);
+        HOMEROWMODS(rhm, LEFT_KEYS_36);
+        HOMEROWMODS2(rhm_scln, LEFT_KEYS_36, &us_scln);
     };
 };
