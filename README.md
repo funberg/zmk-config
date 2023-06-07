@@ -11,4 +11,4 @@ $ ./interactive.sh
 # Local build
 $ ./interactive.sh
 > cd /workspaces/zmk-config
-> ./build.sh
+> ./build.sh zen
