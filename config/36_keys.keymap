@@ -109,12 +109,21 @@
 
         code_layer {
             bindings = <
-&kp BANG        &kp SE_AT_MAC_ISO &kp HASH         &kp SE_DLR_MAC   &kp PRCNT                &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS
-&kp SE_TILD_MAC &none             &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC_ISO      &sk LSHIFT   &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO
-&kp ESC         &none             &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK_MAC_ISO      &caps_word   &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT
-                                  &trans           &trans           &trans                   &trans       &trans       &trans
+&kp BANG    &kp SE_AT_MAC_ISO &kp HASH            &kp SE_DLR_MAC      &kp PRCNT            &kp SE_CIRC  &kp SE_AMPR     &kp SE_ASTR     &kp SE_UNDS        &kp SE_MINS
+&kp SE_PLUS &kp SE_EQL        &kp SE_LPRN         &kp SE_RPRN         &kp SE_GRV           &sk LSHIFT   &kp SE_RCBR_MAC &kp SE_LCBR_MAC &kp SE_PIPE_MAC  &kp SE_DQUO
+&kp ESC     &none             &kp SE_LABK_MAC_ISO &kp SE_RABK_MAC_ISO &kp SE_TILD_MAC      &caps_word   &kp SE_RBRC_MAC &kp SE_LBRC_MAC &kp SE_BSLS_MAC  &kp SE_QUOT
+                                  &trans              &trans              &trans           &trans       &trans          &trans
             >;
         };
+
+//         code_layer {
+//             bindings = <
+// &kp BANG        &kp SE_AT_MAC_ISO &kp HASH         &kp SE_DLR_MAC   &kp PRCNT                &kp SE_CIRC  &kp SE_AMPR  &kp SE_ASTR &kp SE_UNDS      &kp SE_MINS
+// &kp SE_TILD_MAC &none             &kp SE_LCBR_MAC  &kp SE_LBRC_MAC  &kp SE_LABK_MAC_ISO      &sk LSHIFT   &kp SE_LPRN  &kp SE_EQL  &kp SE_PIPE_MAC  &kp SE_DQUO
+// &kp ESC         &none             &kp SE_RCBR_MAC  &kp SE_RBRC_MAC  &kp SE_RABK_MAC_ISO      &caps_word   &kp SE_RPRN  &kp SE_PLUS &kp SE_BSLS_MAC  &kp SE_QUOT
+//                                   &trans           &trans           &trans                   &trans       &trans       &trans
+//             >;
+//         };
 
         num_layer {
             bindings = <
@@ -136,7 +145,7 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &reset        &none  &none  &none       &kp C_NEXT  &kp C_MUTE    &none &none &tog GAM
+&bootloader  &sys_reset        &none  &none  &none       &kp C_NEXT  &kp C_MUTE    &none &none &tog GAM
 &bt BT_SEL 0 &bt BT_SEL 1  &none  &none  &none       &kp C_PP    &kp C_VOL_UP  &none &none &none
 &out OUT_TOG &none         &none  &none  &none       &kp C_PREV  &kp C_VOL_DN  &none &none &none
                            &trans &trans &trans      &trans      &trans        &trans
